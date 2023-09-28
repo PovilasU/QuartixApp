@@ -30,10 +30,15 @@ function App() {
     let availableInspections = getAvailableInspections(vehicle, inspections);
 
     return (
-      <table>
-        <li key={vi}>
-          id:{vehicle.id},|Description:{vehicle.description},|Type:
-          {vehicle.type}|, | inspections:
+      <div className="vehicles" key={vi}>
+        <h4>id: {vehicle.id}</h4>
+        <h4>Description:{vehicle.description},</h4>
+        <h4>
+          Type:
+          {vehicle.type}
+        </h4>
+        <h4>
+          inspections:
           {vehicle.inspection.map((item, ii) => {
             return (
               <span key={ii} className="inspection">
@@ -41,7 +46,9 @@ function App() {
               </span>
             );
           })}
-          ,| availableInspections:
+        </h4>
+        <h4>
+          Available Inspections:
           {availableInspections.map((item, ii) => {
             return (
               <span key={item} className="inspection">
@@ -49,9 +56,8 @@ function App() {
               </span>
             );
           })}
-          |,
-        </li>
-      </table>
+        </h4>
+      </div>
     );
   });
 
@@ -157,6 +163,14 @@ function App() {
           {filteredAllowedInspections}
         </div>
       </main>
+      <br></br>
+      <br></br>
+      <br></br>{" "}
+      <footer>
+        <a href="https://github.com/PovilasU/QuartixApp">
+          Git Repo of source code
+        </a>
+      </footer>
     </MyStore.Provider>
   );
 }

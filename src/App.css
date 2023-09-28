@@ -25,3 +25,12 @@ select {
   font-size: 0.9rem;
   padding: 2px 5px;
 }
+
+table, th, tr {
+  border: 1px solid var(--secondary)
+}
+
+
+.vehicles{
+  border: 1px solid var(--secondary)
+}
