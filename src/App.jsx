@@ -90,13 +90,12 @@ function App() {
     <MyStore.Provider value={[data, setData]}>
       <main className="container">
         <div>
-          {" "}
           <h1>Quartix APP</h1>
-          <p>list of vehicles:</p>
+          <h2>List of vehicles:</h2>
           {vehiclesList}
         </div>
 
-        <div>
+        <div className="vehicles">
           <label> Filtering vehicles by type:</label>
           <select
             name=""
@@ -115,7 +114,8 @@ function App() {
           </select>
           {filteredVehicles}
         </div>
-        <div>
+
+        <div className="vehicles">
           <label> Filtering inspections by name:</label>
           <select
             name=""
@@ -137,7 +137,7 @@ function App() {
 
           {filteredInspections}
         </div>
-        <div>
+        <div className="vehicles">
           <label> Filtering inspections by Allowed type:</label>
           <select
             name=""
@@ -163,9 +163,7 @@ function App() {
           {filteredAllowedInspections}
         </div>
       </main>
-      <br></br>
-      <br></br>
-      <br></br>{" "}
+
       <footer>
         <a href="https://github.com/PovilasU/QuartixApp">
           Git Repo of source code

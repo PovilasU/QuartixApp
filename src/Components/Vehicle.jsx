@@ -1,6 +1,3 @@
-import { useContext } from "react";
-import { MyStore } from "../App";
-
 export default function Vehicle({ vehicle }) {
   return (
     <li>

@@ -32,5 +32,6 @@ table, th, tr {
 
 
 .vehicles{
-  border: 1px solid var(--secondary)
+  border: 1px solid var(--secondary);
+  margin-top: 10px;
 }
