@@ -4,10 +4,7 @@ export const vehiclesData = {
         {
             "id":1,
             "description":"Tesco",
-            "type":"lorry",
-            // "inspection": [],
-            // "inspection":["battery", "lights","fluids","tyres", "water","fuel"],
-            //  "inspection":["water","fluids"],
+            "type":"lorry",    
              "inspection":["fluids"],
         },
         {

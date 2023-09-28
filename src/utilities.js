@@ -1,27 +1,4 @@
-export const getValidInspection = (vehicle, inspections) => {
-    return inspections.filter((inspection) => {
-      const { allowedType } = inspection;
-      return allowedType === "any" || allowedType.includes(vehicle.type);
-    });
-  };
 
-  export const avInspectionsNames = (arr) => {
-    return arr.map((inspection) => {
-      return inspection.name;
-    });
-  };
-
-  export const avInspectionsNamesNew = (vehicle, inspections) => {
-    //vehicle.inspection
-    return inspections
-      .filter((inspection) => {
-        const { allowedType } = inspection;
-        return allowedType === "any" || allowedType.includes(vehicle.type);
-      })
-      .map((inspection) => {
-        return inspection.name;
-      });
-  };
   export const getAvailableInspections = (vehicle, inspections) => {
     let inspectionNames = inspections
       .filter((inspection) => {
@@ -48,3 +25,44 @@ export const getValidInspection = (vehicle, inspections) => {
 
     return availableArr;
   };
+
+  export const getValidInspection = (vehicle, inspections) => {
+    return inspections.filter((inspection) => {
+      const { allowedType } = inspection;
+      return allowedType === "any" || allowedType.includes(vehicle.type);
+    });
+  };
+
+  export const avInspectionsNames = (arr) => {
+    return arr.map((inspection) => {
+      return inspection.name;
+    });
+  };
+
+  export const avInspectionsNamesNew = (vehicle, inspections) => {
+    //vehicle.inspection
+    return inspections
+      .filter((inspection) => {
+        const { allowedType } = inspection;
+        return allowedType === "any" || allowedType.includes(vehicle.type);
+      })
+      .map((inspection) => {
+        return inspection.name;
+      });
+  };
+
+  export const createVehicle = (id, name, type, inspection) => {
+    if (typeof name !== "string") {
+      name = "Unknown";
+    }
+    let obj = {
+      id,
+      name,
+      type,
+      inspection,
+    };
+  
+    return obj;
+  };
+  
+  
